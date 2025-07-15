@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Souvenir</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      /* Par défaut (desktop), on limite la taille pour que ça reste visible */
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Sur mobile portrait (max-width: 600px par ex) */
+    @media (max-width: 600px) and (orientation: portrait) {
+      img {
+        width: 100vw;  /* largeur pleine */
+        height: auto;  /* hauteur proportionnelle */
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/b9NPlOB.jpeg" alt="Image souvenir" />
+</body>
+</html>
